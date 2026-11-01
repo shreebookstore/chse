@@ -229,7 +229,7 @@
 
                 </div>
 
-                <!-- Right Feature Graphics / Highlight Card -->
+                <!-- Right Feature Graphics / Highlight Card with Real Book Image -->
                 <div class="lg:col-span-5 relative mt-4 lg:mt-0">
                     <div class="relative mx-auto max-w-sm sm:max-w-md bg-gradient-to-b from-slate-800 to-slate-900 border border-slate-700/80 rounded-3xl p-4 sm:p-6 shadow-2xl">
                         
@@ -243,26 +243,13 @@
                             </span>
                         </div>
 
-                        <!-- Highlight Cover SVG Vector Illustration -->
+                        <!-- Real Cover Image Container -->
                         <div class="relative bg-slate-950 rounded-2xl p-4 border border-slate-800 text-center mb-4 sm:mb-6 overflow-hidden group">
-                            <div class="w-36 h-48 sm:w-44 sm:h-56 mx-auto rounded-xl bg-gradient-to-br from-amber-600 via-amber-700 to-slate-900 p-3 border border-amber-400/40 shadow-xl flex flex-col justify-between text-left relative transform group-hover:scale-105 transition duration-300">
-                                <div class="flex justify-between items-start">
-                                    <span class="bg-slate-950/80 text-amber-300 text-[8px] font-bold px-1.5 py-0.5 rounded uppercase">CHSE +2</span>
-                                    <i class="fa-solid fa-graduation-cap text-amber-300 text-sm"></i>
-                                </div>
-                                <div>
-                                    <i class="fa-solid fa-book-bookmark text-white/20 text-5xl absolute right-2 bottom-12"></i>
-                                    <p class="text-[10px] font-bold text-amber-200 tracking-wider uppercase">POLITICAL SCIENCE</p>
-                                    <h4 class="text-xs font-black text-white uppercase leading-tight mt-0.5">Internal Exam Guide</h4>
-                                    <p class="text-[8px] text-slate-300 mt-1">Kshitibanta Sahu</p>
-                                </div>
-                                <div class="border-t border-amber-400/30 pt-1 flex justify-between items-center">
-                                    <span class="text-[7px] text-amber-200 uppercase font-semibold">2026-2027 Edition</span>
-                                    <i class="fa-solid fa-shield-halved text-[9px] text-amber-400"></i>
-                                </div>
+                            <div class="w-36 h-48 sm:w-44 sm:h-60 mx-auto rounded-xl overflow-hidden border border-amber-400/40 shadow-2xl relative transform group-hover:scale-105 transition duration-300">
+                                <img src="image.jpg" alt="+2 CHSE ODISHA Political Science Most Expected Question Note" class="w-full h-full object-cover">
                             </div>
-                            <h3 class="text-base sm:text-lg font-bold text-white mt-4">CHSE +2 Political Science Internal Exam Guide</h3>
-                            <p class="text-xs text-slate-400 mt-1">Written by Kshitibanta Sahu. Chapter-wise selected questions, answers & mock tests.</p>
+                            <h3 class="text-base sm:text-lg font-bold text-white mt-4">+2 CHSE ODISHA Political Science Most Expected Question Note</h3>
+                            <p class="text-xs text-slate-400 mt-1">Written by Kshitibanta Sahu. Chapter-wise selected questions, answers & mock tests for 2026-27 Edition.</p>
                             <div class="mt-3 flex items-center justify-center gap-2">
                                 <span class="text-xl font-extrabold text-amber-400">₹99</span>
                                 <span class="text-xs text-slate-500 line-through">₹249</span>
@@ -596,18 +583,19 @@
         // Standard WhatsApp Number Configuration
         const WHATSAPP_NUMBER = "918249093049";
 
-        // BOOK DATA STORE
+        // BOOK DATA STORE WITH IMAGE SUPPORT
         const bookCatalog = [
             {
                 id: 1,
-                title: "CHSE +2 Political Science Internal Exam Guide",
+                title: "+2 CHSE ODISHA Political Science Most Expected Question Note",
                 author: "Kshitibanta Sahu",
                 category: "+2 CHSE Odisha Special",
                 price: 99,
                 originalPrice: 249,
                 rating: 4.9,
                 badge: "BESTSELLER",
-                description: "Comprehensive study notes written by Kshitibanta Sahu. Includes internal exam preparation, chapter-wise selected questions, model Q&A, and mock test papers for 2026-2027 edition.",
+                description: "Written by Kshitibanta Sahu (Senior Lecturer, Govt. HSS, Mandal). Includes internal exam preparation, chapter-wise selected questions, model Q&A based on new CHSE syllabus for 2026-27 edition.",
+                image: "image.jpg",
                 icon: "fa-book",
                 accent: "from-amber-600 to-amber-800"
             },
@@ -621,6 +609,7 @@
                 rating: 4.8,
                 badge: "RECOMMENDED",
                 description: "This book aims to make Political Science learning easier, faster, and more effective through well-organized study materials, important questions, short answers, and exam-oriented revision notes.",
+                image: "image2.jpg",
                 icon: "fa-file-lines",
                 accent: "from-blue-700 to-indigo-900"
             },
@@ -634,6 +623,7 @@
                 rating: 4.7,
                 badge: "Question Bank",
                 description: "All-in-one bundle containing Political Science, History, Economics, and Odia notes designed for maximum score.",
+                image: "image3.jpg",
                 icon: "fa-graduation-cap",
                 accent: "from-emerald-700 to-slate-900"
             },
@@ -647,6 +637,7 @@
                 rating: 4.9,
                 badge: "POPULAR",
                 description: "In-depth guide covering Indian Constitution, Democracy, Foreign Policy, and Political Theory for Higher Education & Competitive Exams.",
+                image: "image.jpg",
                 icon: "fa-scale-balanced",
                 accent: "from-purple-700 to-slate-900"
             },
@@ -660,6 +651,7 @@
                 rating: 4.8,
                 badge: "NEW",
                 description: "Targeted digital handbook for OSSC, OSSSC, and State exams with high-yield general knowledge and MCQ keys.",
+                image: "image.jpg",
                 icon: "fa-trophy",
                 accent: "from-amber-700 to-red-950"
             },
@@ -673,6 +665,7 @@
                 rating: 5.0,
                 badge: "HANDWRITTEN",
                 description: "Clean, ultra-crisp handwritten notes for last-minute revision before board examinations.",
+                image: "image.jpg",
                 icon: "fa-pen-clip",
                 accent: "from-cyan-700 to-blue-950"
             },
@@ -686,6 +679,7 @@
                 rating: 4.6,
                 badge: "FEATURED",
                 description: "Complete grammar, prose, poetry annotations, and expected long question answers.",
+                image: "image.jpg",
                 icon: "fa-language",
                 accent: "from-rose-700 to-slate-950"
             },
@@ -699,6 +693,7 @@
                 rating: 4.5,
                 badge: "EBOOK",
                 description: "Updated digital booklet containing essential general knowledge and key events.",
+                image: "image.jpg",
                 icon: "fa-globe",
                 accent: "from-indigo-700 to-slate-950"
             }
@@ -766,7 +761,7 @@
             renderBooks(filtered);
         }
 
-        // Render Book Grid
+        // Render Book Grid with Real Book Cover Image Support
         function renderBooks(booksToRender = bookCatalog) {
             const grid = document.getElementById('book-grid');
             const noResults = document.getElementById('no-results');
@@ -783,6 +778,17 @@
                 const waMessage = encodeURIComponent(`Hello Shree Digital Book Store, I would like to order "${book.title}" (Price: ₹${book.price}). Please share payment details and PDF copy.`);
                 const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${waMessage}`;
 
+                const coverContent = book.image 
+                    ? `<img src="${book.image}" alt="${book.title}" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition duration-200">`
+                    : `<div class="w-28 h-36 bg-gradient-to-br ${book.accent || 'from-slate-800 to-slate-950'} rounded-lg border border-amber-500/30 p-2 shadow-lg flex flex-col justify-between text-left group-hover:scale-105 transition duration-200">
+                        <div class="text-[7px] text-amber-300 font-bold uppercase truncate">${book.category}</div>
+                        <div class="my-auto text-center">
+                            <i class="fa-solid ${book.icon || 'fa-book'} text-2xl text-amber-400/90 mb-1"></i>
+                            <div class="text-[8px] font-bold text-white line-clamp-2 leading-tight">${book.title}</div>
+                        </div>
+                        <div class="text-[7px] text-slate-300 truncate">${book.author}</div>
+                       </div>`;
+
                 return `
                 <div class="bg-slate-900 border border-slate-800 rounded-3xl p-4 sm:p-5 flex flex-col justify-between hover:border-slate-700 transition duration-300 hover:-translate-y-1 shadow-xl">
                     <div>
@@ -796,15 +802,10 @@
                             </span>
                         </div>
 
-                        <!-- Card Book Cover Simulation -->
-                        <div class="bg-slate-950 rounded-2xl p-3 border border-slate-800 text-center mb-4 relative overflow-hidden group flex items-center justify-center min-h-[140px]">
-                            <div class="w-28 h-36 bg-gradient-to-br ${book.accent || 'from-slate-800 to-slate-950'} rounded-lg border border-amber-500/30 p-2 shadow-lg flex flex-col justify-between text-left group-hover:scale-105 transition duration-200">
-                                <div class="text-[7px] text-amber-300 font-bold uppercase truncate">${book.category}</div>
-                                <div class="my-auto text-center">
-                                    <i class="fa-solid ${book.icon || 'fa-book'} text-2xl text-amber-400/90 mb-1"></i>
-                                    <div class="text-[8px] font-bold text-white line-clamp-2 leading-tight">${book.title}</div>
-                                </div>
-                                <div class="text-[7px] text-slate-300 truncate">${book.author}</div>
+                        <!-- Card Book Cover Simulation / Real Image -->
+                        <div class="bg-slate-950 rounded-2xl p-2.5 border border-slate-800 text-center mb-4 relative overflow-hidden group flex items-center justify-center h-[180px]">
+                            <div class="h-full max-w-[130px] rounded-lg shadow-lg flex items-center justify-center overflow-hidden">
+                                ${coverContent}
                             </div>
                         </div>
 
@@ -869,8 +870,11 @@
 
             const waMessage = encodeURIComponent(`Hello Shree Digital Book Store, I want to order "${book.title}" (₹${book.price}) after reviewing preview modal.`);
 
+            const imageHtml = book.image ? `<div class="w-28 sm:w-32 h-36 sm:h-44 mx-auto mb-3 rounded-lg overflow-hidden border border-amber-400/40 shadow-lg"><img src="${book.image}" alt="${book.title}" class="w-full h-full object-cover"></div>` : '';
+
             container.innerHTML = `
                 <div class="space-y-4">
+                    ${imageHtml}
                     <div class="inline-block bg-amber-500/10 text-amber-400 text-[10px] sm:text-xs font-bold px-3 py-1 rounded-full border border-amber-500/30">
                         ${book.category}
                     </div>
@@ -1053,7 +1057,7 @@
             let response = "";
 
             if (lower.includes('political') || lower.includes('pol science')) {
-                response = `📚 For <strong>Political Science</strong>, I highly recommend our flagship <strong>CHSE +2 Political Science Internal Exam Guide (₹99)</strong> or <strong>Quick Revision Guide (₹249)</strong>. Both contain full chapter summaries and answers tailored for Odisha board examinations!`;
+                response = `📚 For <strong>Political Science</strong>, I highly recommend our flagship <strong>+2 CHSE ODISHA Political Science Most Expected Question Note (₹99)</strong> or <strong>Quick Revision Guide (₹249)</strong>. Both contain full chapter summaries and answers tailored for Odisha board examinations!`;
             } else if (lower.includes('+2') || lower.includes('chse') || lower.includes('arts')) {
                 response = `🎓 We specialize in <strong>CHSE +2 Odisha Board</strong> materials! We offer Political Science, History, MIL Odia, English, and complete question bank packages. Direct PDF copies can be delivered via WhatsApp +91 8249093049!`;
             } else if (lower.includes('competitive') || lower.includes('ossc') || lower.includes('gk')) {
