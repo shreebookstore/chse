@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHREE DIGITAL BOOK STORE - Digital Books, CHSE +2 Notes & Study Material</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#1d4ed8',
+                            600: '#1e40af',
+                            700: '#1d3557',
+                            800: '#0f172a',
+                        },
+                        gold: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        },
+                        whatsapp: '#25D366'
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-header {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #fef08a 0%, #f59e0b 50%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        }
+        .hero-bg {
+            background: radial-gradient(circle at 50% 20%, #1e3a8a 0%, #0f172a 70%);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f59e0b;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col selection:bg-gold-500 selection:text-slate-900">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-gradient-to-r from-blue-900 via-indigo-900 to-amber-900 text-amber-200 text-xs sm:text-sm py-2 px-4 text-center font-medium border-b border-amber-500/20 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto w-full flex justify-between items-center">
+            <span class="truncate"><i class="fa-solid fa-graduation-cap text-gold-400 mr-2"></i> Special Discount on CHSE +2 Odisha Board Books & Notes!</span>
+            <a href="https://wa.me/918249093049?text=Hello%20Shree%20Digital%20Book%20Store,%20I%20want%20to%20inquire%20about%20study%20materials." target="_blank" class="hidden md:flex items-center gap-2 hover:text-white transition">
+                <i class="fa-brands fa-whatsapp text-whatsapp font-bold text-base"></i> Direct Help: +91 8249093049
+            </a>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header class="sticky top-0 z-40 glass-header border-b border-slate-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+            
+            <!-- LOGO -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-xl gold-gradient-bg flex items-center justify-center text-slate-950 font-bold text-2xl shadow-lg shadow-amber-500/20 group-hover:scale-105 transition">
+                    <i class="fa-solid fa-book-bookmark"></i>
+                </div>
+                <div>
+                    <span class="font-display font-extrabold text-xl sm:text-2xl tracking-tight text-white block leading-none">
+                        SHREE <span class="gold-gradient-text">DIGITAL</span>
+                    </span>
+                    <span class="text-[10px] tracking-widest uppercase text-slate-400 font-semibold mt-1 block">Book Store & Notes Hub</span>
+                </div>
+            </a>
+
+            <!-- DESKTOP NAV -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-slate-300">
+                <a href="#home" class="hover:text-gold-400 transition py-1 border-b-2 border-transparent hover:border-gold-400">Home</a>
+                <a href="#catalog" class="hover:text-gold-400 transition py-1 border-b-2 border-transparent hover:border-gold-400">Explore Books</a>
+                <a href="#chse-section" class="hover:text-gold-400 transition py-1 border-b-2 border-transparent hover:border-gold-400"><span class="text-amber-400 font-semibold">CHSE +2 Notes</span></a>
+                <a href="#ai-assistant" class="hover:text-gold-400 transition py-1 border-b-2 border-transparent hover:border-gold-400"><i class="fa-solid fa-wand-magic-sparkles text-amber-400 mr-1"></i> AI Finder</a>
+                <a href="#contact" class="hover:text-gold-400 transition py-1 border-b-2 border-transparent hover:border-gold-400">Contact Us</a>
+            </nav>
+
+            <!-- ACTION BUTTONS -->
+            <div class="flex items-center gap-3">
+                <!-- Cart/Inquiry Button -->
+                <button onclick="toggleCartModal()" class="relative p-2.5 rounded-xl bg-slate-800/80 border border-slate-700 text-slate-200 hover:text-white hover:bg-slate-700 transition" title="Inquiry Basket">
+                    <i class="fa-solid fa-layer-group text-lg"></i>
+                    <span id="cart-count" class="absolute -top-1.5 -right-1.5 bg-gold-500 text-slate-950 font-bold text-xs w-5 h-5 rounded-full flex items-center justify-center">0</span>
+                </button>
+
+                <!-- WhatsApp Quick Button -->
+                <a href="https://wa.me/918249093049?text=Hi%20Shree%20Digital%20Book%20Store,%20I%20have%20a%20general%20inquiry." target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-4 py-2.5 rounded-xl text-sm shadow-lg shadow-emerald-900/30 transition hover:-translate-y-0.5">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>WhatsApp Us</span>
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button onclick="toggleMobileMenu()" class="lg:hidden p-2.5 rounded-xl bg-slate-800 border border-slate-700 text-slate-300">
+                    <i class="fa-solid fa-bars text-lg" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- MOBILE MENU DROPDOWN -->
+        <div id="mobile-menu" class="hidden lg:hidden border-b border-slate-800 bg-slate-900 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-gold-400 font-medium">Home</a>
+            <a href="#catalog" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-gold-400 font-medium">Explore Books</a>
+            <a href="#chse-section" onclick="toggleMobileMenu()" class="block py-2 text-amber-400 font-medium">CHSE +2 Notes & Materials</a>
+            <a href="#ai-assistant" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-gold-400 font-medium"><i class="fa-solid fa-wand-magic-sparkles text-amber-400 mr-2"></i> AI Book Assistant</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-gold-400 font-medium">Contact Us</a>
+            <a href="https://wa.me/918249093049?text=Hi%20Shree%20Digital%20Book%20Store" target="_blank" class="flex items-center justify-center gap-2 bg-emerald-600 text-white font-semibold py-2.5 rounded-xl text-sm w-full mt-2">
+                <i class="fa-brands fa-whatsapp text-lg"></i> Chat on WhatsApp (8249093049)
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-bg relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden border-b border-slate-800">
+        <div class="absolute inset-0 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:24px_24px] opacity-10"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Text Content -->
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs sm:text-sm font-semibold">
+                        <i class="fa-solid fa-certificate"></i> Premium Educational Resource Hub
+                    </div>
+                    
+                    <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl tracking-tight text-white leading-tight">
+                        Your One-Stop Destination for <span class="gold-gradient-text">Digital Books</span> & CHSE Notes
+                    </h1>
+
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Access high-quality eBooks, Political Science handwritten notes, CHSE Odisha +2 study materials, question banks, and competitive guides delivered instantly via PDF or WhatsApp!
+                    </p>
+
+                    <!-- Search Bar in Hero -->
+                    <div class="pt-2 max-w-xl mx-auto lg:mx-0">
+                        <div class="relative flex items-center">
+                            <i class="fa-solid fa-magnifying-glass absolute left-4 text-slate-400 text-lg"></i>
+                            <input type="text" id="hero-search-input" onkeyup="handleHeroSearch(event)" placeholder="Search Political Science, +2 CHSE Notes, Question Banks..." class="w-full bg-slate-900/90 border border-slate-700 focus:border-amber-500 text-white rounded-2xl pl-12 pr-28 py-4 text-sm sm:text-base outline-none transition shadow-2xl">
+                            <button onclick="triggerHeroSearch()" class="absolute right-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold px-5 py-2.5 rounded-xl text-sm transition flex items-center gap-2">
+                                Search
+                            </button>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-3 text-xs text-slate-400 justify-center lg:justify-start">
+                            <span class="text-slate-500 font-semibold">Popular:</span>
+                            <button onclick="quickSearch('Political Science')" class="hover:text-amber-400 underline decoration-slate-600">Political Science</button>
+                            <button onclick="quickSearch('CHSE +2')" class="hover:text-amber-400 underline decoration-slate-600">+2 Odisha Notes</button>
+                            <button onclick="quickSearch('Question Bank')" class="hover:text-amber-400 underline decoration-slate-600">Question Banks</button>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#catalog" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-8 py-4 rounded-xl text-base shadow-lg shadow-amber-500/20 text-center transition hover:scale-105">
+                            <i class="fa-solid fa-book-open mr-2"></i> Browse Book Catalog
+                        </a>
+                        <a href="https://wa.me/918249093049?text=Hello%20Shree%20Digital%20Book%20Store,%20I%20want%20to%20order%20books%20or%20notes." target="_blank" class="w-full sm:w-auto bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold px-8 py-4 rounded-xl text-base text-center transition flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-whatsapp text-xl"></i> Order via WhatsApp
+                        </a>
+                    </div>
+
+                    <!-- Quick Stats -->
+                    <div class="pt-6 grid grid-cols-3 gap-4 border-t border-slate-800 max-w-lg mx-auto lg:mx-0 text-center lg:text-left">
+                        <div>
+                            <span class="block text-2xl font-bold text-amber-400">100%</span>
+                            <span class="text-xs text-slate-400">Verified Syllabus</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl font-bold text-amber-400">Instant</span>
+                            <span class="text-xs text-slate-400">WhatsApp Delivery</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl font-bold text-amber-400">CHSE +2</span>
+                            <span class="text-xs text-slate-400">Specialized Notes</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Feature Graphics / Highlight Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md bg-gradient-to-b from-slate-800 to-slate-900 border border-slate-700/80 rounded-3xl p-6 shadow-2xl">
+                        
+                        <!-- Top Tag -->
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="bg-amber-500/20 text-amber-400 text-xs font-bold px-3 py-1 rounded-full border border-amber-500/30">
+                                HOT SELLER
+                            </span>
+                            <span class="text-xs text-slate-400 flex items-center gap-1">
+                                <i class="fa-solid fa-star text-amber-400"></i> 4.9 (250+ reviews)
+                            </span>
+                        </div>
+
+                        <!-- Card Preview Box with Uploaded Image -->
+                        <div class="relative bg-slate-950 rounded-2xl p-4 border border-slate-800 text-center mb-6 overflow-hidden group">
+                            <div class="w-48 h-48 mx-auto rounded-lg overflow-hidden border border-amber-500/30 shadow-xl relative transform group-hover:scale-105 transition duration-300">
+                                <img src="FILE/INTERNAL.jpg" alt="CHSE +2 Political Science Internal Exam Guide" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-lg font-bold text-white mt-4">CHSE +2 Political Science Internal Exam Guide</h3>
+                            <p class="text-xs text-slate-400 mt-1">Written by Kshitibanta Sahu. Chapter-wise selected questions, answers & mock tests.</p>
+                            <div class="mt-3 flex items-center justify-center gap-2">
+                                <span class="text-xl font-extrabold text-amber-400">₹99</span>
+                                <span class="text-xs text-slate-500 line-through">₹249</span>
+                                <span class="text-[10px] bg-emerald-500/20 text-emerald-400 font-bold px-2 py-0.5 rounded">60% OFF</span>
+                            </div>
+                        </div>
+
+                        <!-- Quick Buy Button -->
+                        <a href="https://wa.me/918249093049?text=I%20want%20to%20buy%20CHSE%20%2B2%20Political%20Science%20Internal%20Exam%20Guide" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 rounded-xl text-center block transition shadow-lg shadow-emerald-900/40">
+                            <i class="fa-brands fa-whatsapp text-lg mr-2"></i> Order This Title on WhatsApp
+                        </a>
+
+                        <div class="mt-4 text-center text-xs text-slate-400 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-shield-halved text-amber-400"></i> Direct PDF Sent to +91 8249093049
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED CHSE HIGHLIGHT BANNER -->
+    <section id="chse-section" class="py-12 bg-slate-900 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-blue-950 via-slate-900 to-amber-950 border border-amber-500/30 rounded-3xl p-6 sm:p-10 relative overflow-hidden">
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+                    <div class="space-y-3 text-center lg:text-left">
+                        <span class="inline-block bg-amber-500 text-slate-950 font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider">Odisha Board Special</span>
+                        <h2 class="text-2xl sm:text-3xl font-display font-bold text-white">CHSE +2 Political Science & Arts Notes</h2>
+                        <p class="text-slate-300 text-sm max-w-xl">
+                            Handcrafted, exam-oriented digital notes created according to the latest CHSE Odisha syllabus. Concise summaries, question banks, and solved papers.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap items-center justify-center gap-3">
+                        <button onclick="filterByCategory('+2 CHSE Odisha Special')" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-6 py-3 rounded-xl text-sm transition">
+                            Explore +2 Notes
+                        </button>
+                        <button onclick="openCustomRequestModal('CHSE +2 Special Request')" class="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold px-6 py-3 rounded-xl text-sm transition">
+                            Request Specific Chapter
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CATALOG & FILTER SYSTEM -->
+    <section id="catalog" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-grow">
+        
+        <!-- Section Title & Filter Tabs -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-6">
+            <div>
+                <h2 class="text-2xl sm:text-4xl font-display font-bold text-white">Explore <span class="gold-gradient-text">Digital Books</span></h2>
+                <p class="text-slate-400 text-sm mt-1">Select from our wide collection of digital notes, guides, and competitive exam books.</p>
+            </div>
+
+            <!-- Search & Filters -->
+            <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                <div class="relative flex-1 sm:w-64">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-slate-400 text-sm"></i>
+                    <input type="text" id="catalog-search" oninput="applyFilters()" placeholder="Search title or author..." class="w-full bg-slate-900 border border-slate-700 focus:border-amber-500 text-white rounded-xl pl-9 pr-4 py-2.5 text-sm outline-none">
+                </div>
+                <select id="sort-select" onchange="applyFilters()" class="bg-slate-900 border border-slate-700 text-slate-200 rounded-xl px-4 py-2.5 text-sm outline-none focus:border-amber-500">
+                    <option value="default">Sort by: Featured</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="rating">Top Rated</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Category Pills Bar -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 scrollbar-none" id="category-pills">
+            <!-- Dynamic JavaScript injects category pills here -->
+        </div>
+
+        <!-- BOOK GRID -->
+        <div id="book-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Dynamic Book Cards injected here -->
+        </div>
+
+        <!-- NO RESULTS MESSAGE -->
+        <div id="no-results" class="hidden text-center py-16 bg-slate-900/50 rounded-3xl border border-slate-800 my-8">
+            <i class="fa-solid fa-book-bookmark text-4xl text-slate-600 mb-3"></i>
+            <h3 class="text-lg font-bold text-white">No Books Found</h3>
+            <p class="text-slate-400 text-sm mt-1">Try adjusting your search terms or filters.</p>
+            <button onclick="resetFilters()" class="mt-4 bg-amber-500 text-slate-950 font-bold px-4 py-2 rounded-xl text-xs">Reset All Filters</button>
+        </div>
+
+    </section>
+
+    <!-- AI BOOK FINDER ASSISTANT SECTION -->
+    <section id="ai-assistant" class="py-16 bg-slate-900 border-t border-b border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-10">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold mb-3">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> AI Powered Book Recommendation
+                </div>
+                <h2 class="text-2xl sm:text-4xl font-display font-bold text-white">Shree AI <span class="gold-gradient-text">Book Guide</span></h2>
+                <p class="text-slate-400 text-sm max-w-xl mx-auto mt-2">Ask our intelligent assistant for book recommendations, exam syllabus guidance, or study material advice!</p>
+            </div>
+
+            <!-- AI Chat UI Box -->
+            <div class="bg-slate-950 border border-slate-800 rounded-3xl overflow-hidden shadow-2xl flex flex-col h-[520px]">
+                
+                <!-- Chat Header -->
+                <div class="bg-slate-900 p-4 border-b border-slate-800 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-xl gold-gradient-bg flex items-center justify-center text-slate-950 font-bold text-lg">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-white flex items-center gap-2">
+                                Shree AI Assistant <span class="w-2 h-2 rounded-full bg-emerald-500 inline-block"></span>
+                            </h4>
+                            <p class="text-[11px] text-slate-400">Online | Smart Recommendation Engine</p>
+                        </div>
+                    </div>
+                    <button onclick="clearAIChat()" class="text-xs text-slate-400 hover:text-white px-2 py-1 rounded bg-slate-800">
+                        <i class="fa-solid fa-rotate-right mr-1"></i> Clear
+                    </button>
+                </div>
+
+                <!-- Chat Body -->
+                <div id="ai-chat-body" class="flex-1 p-4 overflow-y-auto space-y-4 text-sm">
+                    <!-- AI Welcome Message -->
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg gold-gradient-bg flex items-center justify-center text-slate-950 font-bold text-xs shrink-0 mt-1">
+                            AI
+                        </div>
+                        <div class="bg-slate-900 border border-slate-800 text-slate-200 p-3.5 rounded-2xl rounded-tl-none max-w-[85%] leading-relaxed">
+                            Hello! 👋 I am <strong>Shree AI</strong>. What book or study notes are you looking for today? Tell me your class (e.g. +2 CHSE Arts) or subject (e.g. Political Science) and I'll find the best options for you!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Prompts Chips -->
+                <div class="p-3 bg-slate-900/60 border-t border-slate-800 flex items-center gap-2 overflow-x-auto text-xs">
+                    <span class="text-slate-400 text-[11px] whitespace-nowrap"><i class="fa-solid fa-bolt text-amber-400"></i> Quick:</span>
+                    <button onclick="sendQuickPrompt('Suggest best Political Science notes for +2 CHSE Odisha')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg border border-slate-700 whitespace-nowrap transition">Political Science +2</button>
+                    <button onclick="sendQuickPrompt('What competitive exam books do you have?')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg border border-slate-700 whitespace-nowrap transition">Competitive Exams</button>
+                    <button onclick="sendQuickPrompt('Show me low cost question banks')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg border border-slate-700 whitespace-nowrap transition">Question Banks</button>
+                </div>
+
+                <!-- Chat Input Form -->
+                <form onsubmit="handleAISubmit(event)" class="p-3 bg-slate-900 border-t border-slate-800 flex gap-2">
+                    <input type="text" id="ai-input" placeholder="Type your query (e.g., CHSE political science model paper)..." class="flex-1 bg-slate-950 border border-slate-700 focus:border-amber-500 text-white text-sm rounded-xl px-4 py-2.5 outline-none">
+                    <button type="submit" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-5 py-2.5 rounded-xl text-sm transition">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CUSTOM REQUEST & CONTACT SECTION -->
+    <section id="contact" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <!-- Contact Left Info -->
+            <div class="space-y-6">
+                <span class="bg-amber-500/10 text-amber-400 text-xs font-bold px-3 py-1 rounded-full border border-amber-500/30">
+                    DIRECT SUPPORT
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-display font-bold text-white">Need Customized Notes or Soft Copy Books?</h2>
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                    Have a specific book requirement that is not listed in our store? Send us your requirement directly, and our team at **SHREE DIGITAL BOOK STORE** will provide you with the soft copy or PDF.
+                </p>
+
+                <div class="space-y-4 pt-2">
+                    <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-900 border border-slate-800">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl shrink-0">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-400 uppercase font-semibold">Official WhatsApp Number</div>
+                            <a href="https://wa.me/918249093049" target="_blank" class="text-lg font-bold text-white hover:text-emerald-400 transition">+91 8249093049</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-900 border border-slate-800">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-2xl shrink-0">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-400 uppercase font-semibold">Instant Digital Delivery</div>
+                            <div class="text-sm font-semibold text-slate-200">24/7 WhatsApp Response & Instant PDF Downloads</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Right Quick Form -->
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl">
+                <h3 class="text-xl font-bold text-white mb-2">Send Book Request to WhatsApp</h3>
+                <p class="text-xs text-slate-400 mb-6">Fill out the form below to forward your exact study material request directly to our WhatsApp support.</p>
+
+                <form onsubmit="sendCustomWhatsAppRequest(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Your Full Name</label>
+                        <input type="text" id="req-name" required placeholder="Enter your name" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white outline-none focus:border-amber-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Class / Exam Stream</label>
+                        <input type="text" id="req-class" required placeholder="e.g., CHSE +2 2nd Year Arts" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white outline-none focus:border-amber-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Required Book / Subject Notes Title</label>
+                        <textarea id="req-title" rows="3" required placeholder="Describe the book name, subject (e.g. Political Science), chapter, or question bank..." class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white outline-none focus:border-amber-500"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 rounded-xl text-sm transition flex items-center justify-center gap-2 shadow-lg shadow-emerald-900/30">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Forward Request to WhatsApp (+91 8249093049)
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-800 text-slate-400 py-12 text-sm mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-slate-800">
+                
+                <div class="md:col-span-2 space-y-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg gold-gradient-bg flex items-center justify-center text-slate-950 font-bold text-lg">
+                            <i class="fa-solid fa-book-bookmark"></i>
+                        </div>
+                        <span class="font-display font-extrabold text-lg text-white">SHREE DIGITAL BOOK STORE</span>
+                    </div>
+                    <p class="text-xs text-slate-400 max-w-sm">
+                        Providing top quality digital eBooks, CHSE Odisha +2 study notes, Political Science question banks, and education guides.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-3">Quick Navigation</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#catalog" class="hover:text-amber-400 transition">Political Science Notes</a></li>
+                        <li><a href="#catalog" class="hover:text-amber-400 transition">CHSE +2 Special Materials</a></li>
+                        <li><a href="#catalog" class="hover:text-amber-400 transition">Competitive Exam Guides</a></li>
+                        <li><a href="#ai-assistant" class="hover:text-amber-400 transition">AI Book Finder</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-3">Contact Information</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-emerald-400"></i> +91 8249093049
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-envelope text-amber-400"></i> shreedigitalbooks@gmail.com
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-location-dot text-amber-400"></i> Odisha, India
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs gap-4">
+                <p>&copy; <span id="year"></span> SHREE DIGITAL BOOK STORE. All rights reserved.</p>
+                <div class="flex items-center gap-4">
+                    <a href="https://wa.me/918249093049" target="_blank" class="hover:text-emerald-400"><i class="fa-brands fa-whatsapp text-lg"></i></a>
+                    <a href="#" class="hover:text-amber-400"><i class="fa-brands fa-facebook text-lg"></i></a>
+                    <a href="#" class="hover:text-amber-400"><i class="fa-brands fa-telegram text-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP ICON -->
+    <a href="https://wa.me/918249093049?text=Hello%20Shree%20Digital%20Book%20Store,%20I%20need%20help%20with%20books/notes." target="_blank" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-emerald-500 hover:bg-emerald-400 text-white rounded-full flex items-center justify-center shadow-2xl transition hover:scale-110 group" title="Chat on WhatsApp (+91 8249093049)">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+        <span class="absolute right-16 bg-slate-900 text-white text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-700 whitespace-nowrap opacity-0 group-hover:opacity-100 transition duration-200 pointer-events-none shadow-xl">
+            Need Help? Chat +91 8249093049
+        </span>
+    </a>
+
+    <!-- BOOK PREVIEW MODAL -->
+    <div id="preview-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-700 w-full max-w-lg rounded-3xl p-6 relative shadow-2xl space-y-4">
+            <button onclick="closePreviewModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2 text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="preview-modal-content">
+                <!-- Injected via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- INQUIRY CART SLIDE-OVER MODAL -->
+    <div id="cart-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden justify-end">
+        <div class="bg-slate-900 border-l border-slate-800 w-full max-w-md h-full p-6 flex flex-col justify-between">
+            <div>
+                <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+                    <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-layer-group text-amber-400"></i> Inquiry Basket
+                    </h3>
+                    <button onclick="toggleCartModal()" class="text-slate-400 hover:text-white p-1">
+                        <i class="fa-solid fa-xmark text-lg"></i>
+                    </button>
+                </div>
+
+                <div id="cart-items-container" class="py-4 space-y-3 max-h-[60vh] overflow-y-auto">
+                    <!-- Dynamic cart items -->
+                </div>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800 space-y-4">
+                <div class="flex justify-between items-center text-sm font-bold text-white">
+                    <span>Estimated Total:</span>
+                    <span id="cart-total-price" class="text-amber-400 text-lg">₹0</span>
+                </div>
+                <button onclick="checkoutCartToWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 rounded-xl text-sm transition flex items-center justify-center gap-2 shadow-lg shadow-emerald-900/30">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Order All via WhatsApp (+91 8249093049)
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Standard WhatsApp Number Configuration
+        const WHATSAPP_NUMBER = "918249093049";
+
+        // BOOK DATA STORE
+        const bookCatalog = [
+            {
+                id: 1,
+                title: "CHSE +2 Political Science Internal Exam Guide",
+                author: "Kshitibanta Sahu",
+                category: "+2 CHSE Odisha Special",
+                price: 99,
+                originalPrice: 249,
+                rating: 4.9,
+                badge: "BESTSELLER",
+                description: "Comprehensive study notes written by Kshitibanta Sahu. Includes internal exam preparation, chapter-wise selected questions, model Q&A, and mock test papers for 2026-2027 edition.",
+                image: "FILE/INTERNAL.jpg"
+            },
+            {
+                id: 2,
+                title: "+2 Odisha CHSE Political Science Quick Revision Guide Papers",
+                author: "SHRI KSHITIBANTA SAHU",
+                category: "Political Science",
+                price: 249,
+                originalPrice: 399,
+                rating: 4.8,
+                badge: "RECOMMENDED",
+                description: "This book aims to make Political Science learning easier, faster, and more effective through well-organized study materials, important questions, short answers, and exam-oriented revision notes.",
+                image: "FILE/INTERNAL2.jpg"
+            },
+            {
+                id: 3,
+                title: "Complete CHSE +2 Arts Question Bank",
+                author: "Shree Digital Team",
+                category: "+2 CHSE Odisha Special",
+                price: 299,
+                originalPrice: 399,
+                rating: 4.7,
+                badge: "Question Bank",
+                description: "All-in-one bundle containing Political Science, History, Economics, and Odia notes designed for maximum score.",
+                image: "FILE/INTERNAL4.jpg"
+            },
+            {
+                id: 4,
+                title: "Indian Governance & Political Thought (UG/Competitive)",
+                author: "Dr. R. K. Sahoo",
+                category: "Political Science",
+                price: 179,
+                originalPrice: 349,
+                rating: 4.9,
+                badge: "POPULAR",
+                description: "In-depth guide covering Indian Constitution, Democracy, Foreign Policy, and Political Theory for Higher Education & Exams.",
+                icon: "fa-scale-balanced"
+            },
+            {
+                id: 5,
+                title: "Odisha State Competitive Exam GS Guide",
+                author: "Shree Academy",
+                category: "Competitive Exams",
+                price: 249,
+                originalPrice: 499,
+                rating: 4.8,
+                badge: "NEW",
+                description: "Targeted digital handbook for OSSC, OSSSC, and State exams with high-yield general knowledge and MCQ keys.",
+                icon: "fa-trophy"
+            },
+            {
+                id: 6,
+                title: "Handwritten Quick Revision Notes: Political Science",
+                author: "Top Ranker Handwritten",
+                category: "Political Science",
+                price: 79,
+                originalPrice: 199,
+                rating: 5.0,
+                badge: "HANDWRITTEN",
+                description: "Clean, ultra-crisp handwritten notes for last-minute revision before exams.",
+                icon: "fa-pen-clip"
+            },
+            {
+                id: 7,
+                title: "+2 CHSE Odisha English & MIL Notes",
+                author: "Prof. B. Dash",
+                category: "+2 CHSE Odisha Special",
+                price: 119,
+                originalPrice: 229,
+                rating: 4.6,
+                badge: "FEATURED",
+                description: "Complete grammar, prose, poetry annotations, and expected long question answers.",
+                icon: "fa-language"
+            },
+            {
+                id: 8,
+                title: "General Knowledge & Current Affairs eBook",
+                author: "Shree Digital Editorial",
+                category: "General eBooks",
+                price: 59,
+                originalPrice: 149,
+                rating: 4.5,
+                badge: "EBOOK",
+                description: "Updated digital booklet containing essential general knowledge and key events.",
+                icon: "fa-globe"
+            }
+        ];
+
+        // State Management
+        let selectedCategory = "All";
+        let cartItems = [];
+
+        // Dynamic Initialization
+        window.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('year').textContent = new Date().getFullYear();
+            renderCategoryPills();
+            renderBooks();
+        });
+
+        // Render Category Filter Pills
+        function renderCategoryPills() {
+            const categories = ["All", "+2 CHSE Odisha Special", "Political Science", "Competitive Exams", "General eBooks"];
+            const container = document.getElementById('category-pills');
+            
+            container.innerHTML = categories.map(cat => `
+                <button onclick="filterByCategory('${cat}')" class="px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition ${selectedCategory === cat ? 'bg-amber-500 text-slate-950 font-bold shadow-lg shadow-amber-500/20' : 'bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800'}">
+                    ${cat}
+                </button>
+            `).join('');
+        }
+
+        // Filter Functionality
+        function filterByCategory(cat) {
+            selectedCategory = cat;
+            renderCategoryPills();
+            applyFilters();
+        }
+
+        function resetFilters() {
+            selectedCategory = "All";
+            document.getElementById('catalog-search').value = "";
+            document.getElementById('sort-select').value = "default";
+            renderCategoryPills();
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const searchTerm = document.getElementById('catalog-search').value.toLowerCase();
+            const sortOption = document.getElementById('sort-select').value;
+
+            let filtered = bookCatalog.filter(book => {
+                const matchesCat = selectedCategory === "All" || book.category === selectedCategory;
+                const matchesSearch = book.title.toLowerCase().includes(searchTerm) || 
+                                      book.author.toLowerCase().includes(searchTerm) || 
+                                      book.category.toLowerCase().includes(searchTerm);
+                return matchesCat && matchesSearch;
+            });
+
+            // Sorting
+            if (sortOption === "price-low") {
+                filtered.sort((a, b) => a.price - b.price);
+            } else if (sortOption === "price-high") {
+                filtered.sort((a, b) => b.price - a.price);
+            } else if (sortOption === "rating") {
+                filtered.sort((a, b) => b.rating - a.rating);
+            }
+
+            renderBooks(filtered);
+        }
+
+        // Render Book Grid
+        function renderBooks(booksToRender = bookCatalog) {
+            const grid = document.getElementById('book-grid');
+            const noResults = document.getElementById('no-results');
+
+            if (booksToRender.length === 0) {
+                grid.innerHTML = "";
+                noResults.classList.remove('hidden');
+                return;
+            } else {
+                noResults.classList.add('hidden');
+            }
+
+            grid.innerHTML = booksToRender.map(book => {
+                const waMessage = encodeURIComponent(`Hello Shree Digital Book Store, I would like to order "${book.title}" (Price: ₹${book.price}). Please share payment details and PDF copy.`);
+                const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${waMessage}`;
+
+                const coverDisplay = book.image 
+                    ? `<img src="${book.image}" alt="${book.title}" class="w-full h-full object-cover rounded-md">`
+                    : `<div class="w-24 h-32 mx-auto bg-gradient-to-br from-blue-900 to-slate-900 rounded-md border border-amber-500/30 flex flex-col justify-between p-2 relative shadow-lg">
+                        <div class="text-[8px] uppercase font-bold text-amber-400">${book.category}</div>
+                        <i class="fa-solid ${book.icon} text-2xl text-amber-400 my-auto"></i>
+                        <div class="text-[7px] text-slate-300 font-bold leading-tight line-clamp-2">${book.title}</div>
+                       </div>`;
+
+                return `
+                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-5 flex flex-col justify-between hover:border-slate-700 transition duration-300 hover:-translate-y-1 shadow-xl">
+                    <div>
+                        <!-- Top Tag -->
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-[10px] font-extrabold bg-amber-500/10 text-amber-400 px-2.5 py-0.5 rounded-full border border-amber-500/20 uppercase tracking-wider">
+                                ${book.badge}
+                            </span>
+                            <span class="text-xs text-slate-400 flex items-center gap-1 font-semibold">
+                                <i class="fa-solid fa-star text-amber-400 text-xs"></i> ${book.rating}
+                            </span>
+                        </div>
+
+                        <!-- Card Book Cover Simulation -->
+                        <div class="bg-slate-950 rounded-2xl p-4 border border-slate-800 text-center mb-4 relative overflow-hidden group flex items-center justify-center min-h-[140px]">
+                            ${coverDisplay}
+                        </div>
+
+                        <h3 class="font-bold text-white text-base leading-snug line-clamp-2 mb-1">${book.title}</h3>
+                        <p class="text-xs text-slate-400 mb-3"><i class="fa-solid fa-user-pen text-[10px] mr-1"></i> ${book.author}</p>
+                        <p class="text-xs text-slate-400 line-clamp-2 mb-4 leading-relaxed">${book.description}</p>
+                    </div>
+
+                    <div>
+                        <!-- Price Box -->
+                        <div class="flex items-center justify-between pt-3 border-t border-slate-800 mb-4">
+                            <div>
+                                <span class="text-xl font-extrabold text-amber-400">₹${book.price}</span>
+                                <span class="text-xs text-slate-500 line-through ml-1.5">₹${book.originalPrice}</span>
+                            </div>
+                            <button onclick="openPreviewModal(${book.id})" class="text-xs text-slate-300 hover:text-white underline decoration-slate-600">
+                                Quick Preview
+                            </button>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="grid grid-cols-5 gap-2">
+                            <button onclick="addToCart(${book.id})" class="col-span-1 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-xl py-2.5 flex items-center justify-center transition" title="Add to Inquiry Basket">
+                                <i class="fa-solid fa-cart-plus text-sm"></i>
+                            </button>
+                            <a href="${waLink}" target="_blank" class="col-span-4 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs py-2.5 rounded-xl text-center flex items-center justify-center gap-2 transition shadow-lg shadow-emerald-900/30">
+                                <i class="fa-brands fa-whatsapp text-sm"></i> Order via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            }).join('');
+        }
+
+        // Hero Search Handlers
+        function handleHeroSearch(e) {
+            if (e.key === 'Enter') triggerHeroSearch();
+        }
+
+        function triggerHeroSearch() {
+            const query = document.getElementById('hero-search-input').value;
+            if (query) {
+                document.getElementById('catalog-search').value = query;
+                applyFilters();
+                document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function quickSearch(keyword) {
+            document.getElementById('hero-search-input').value = keyword;
+            triggerHeroSearch();
+        }
+
+        // PREVIEW MODAL
+        function openPreviewModal(bookId) {
+            const book = bookCatalog.find(b => b.id === bookId);
+            if (!book) return;
+
+            const modal = document.getElementById('preview-modal');
+            const container = document.getElementById('preview-modal-content');
+
+            const waMessage = encodeURIComponent(`Hello Shree Digital Book Store, I want to order "${book.title}" (₹${book.price}) after reviewing sample preview.`);
+
+            container.innerHTML = `
+                <div class="space-y-4">
+                    <div class="inline-block bg-amber-500/10 text-amber-400 text-xs font-bold px-3 py-1 rounded-full border border-amber-500/30">
+                        ${book.category}
+                    </div>
+                    <h3 class="text-xl font-bold text-white">${book.title}</h3>
+                    <p class="text-xs text-slate-400">Author: ${book.author}</p>
+                    
+                    <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800 space-y-2">
+                        <div class="text-xs font-bold text-amber-400 uppercase tracking-wider">Sample Preview Summary</div>
+                        <p class="text-xs text-slate-300 leading-relaxed">${book.description}</p>
+                        <ul class="text-xs text-slate-400 list-disc list-inside space-y-1 pt-2">
+                            <li>Verified latest syllabus contents</li>
+                            <li>Instant high-quality digital PDF copy</li>
+                            <li>Includes short, medium, and long answer guides</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex items-center justify-between pt-2">
+                        <div>
+                            <span class="text-2xl font-bold text-amber-400">₹${book.price}</span>
+                            <span class="text-xs text-slate-500 line-through ml-2">₹${book.originalPrice}</span>
+                        </div>
+                        <a href="https://wa.me/${WHATSAPP_NUMBER}?text=${waMessage}" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-5 py-2.5 rounded-xl text-xs flex items-center gap-2 transition">
+                            <i class="fa-brands fa-whatsapp text-base"></i> Buy Now (+91 8249093049)
+                        </a>
+                    </div>
+                </div>
+            `;
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closePreviewModal() {
+            const modal = document.getElementById('preview-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // CART & INQUIRY BASKET LOGIC
+        function addToCart(bookId) {
+            const book = bookCatalog.find(b => b.id === bookId);
+            if (!book) return;
+
+            if (!cartItems.some(item => item.id === bookId)) {
+                cartItems.push(book);
+                updateCartUI();
+                showNotification(`Added "${book.title}" to Inquiry Basket!`);
+            } else {
+                showNotification(`"${book.title}" is already in your basket!`);
+            }
+        }
+
+        function removeFromCart(bookId) {
+            cartItems = cartItems.filter(item => item.id !== bookId);
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            document.getElementById('cart-count').textContent = cartItems.length;
+            const container = document.getElementById('cart-items-container');
+            const totalPriceEl = document.getElementById('cart-total-price');
+
+            if (cartItems.length === 0) {
+                container.innerHTML = `<p class="text-xs text-slate-500 text-center py-8">Your basket is empty.</p>`;
+                totalPriceEl.textContent = '₹0';
+                return;
+            }
+
+            let total = 0;
+            container.innerHTML = cartItems.map(item => {
+                total += item.price;
+                return `
+                    <div class="flex items-center justify-between p-3 bg-slate-950 rounded-xl border border-slate-800">
+                        <div>
+                            <h5 class="text-xs font-bold text-white line-clamp-1">${item.title}</h5>
+                            <span class="text-xs text-amber-400 font-bold">₹${item.price}</span>
+                        </div>
+                        <button onclick="removeFromCart(${item.id})" class="text-slate-500 hover:text-red-400 p-1 text-sm">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </div>
+                `;
+            }).join('');
+
+            totalPriceEl.textContent = `₹${total}`;
+        }
+
+        function toggleCartModal() {
+            const modal = document.getElementById('cart-modal');
+            if (modal.classList.contains('hidden')) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            } else {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+        }
+
+        function checkoutCartToWhatsApp() {
+            if (cartItems.length === 0) {
+                showNotification("Please add books to basket before requesting!");
+                return;
+            }
+
+            let message = "Hello Shree Digital Book Store, I would like to order the following books/notes:\n\n";
+            let total = 0;
+            cartItems.forEach((item, index) => {
+                message += `${index + 1}. ${item.title} - ₹${item.price}\n`;
+                total += item.price;
+            });
+            message += `\nTotal Price: ₹${total}\nPlease send digital PDF files and payment details.`;
+
+            const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+            window.open(waUrl, '_blank');
+        }
+
+        // CUSTOM REQUEST FORM
+        function sendCustomWhatsAppRequest(e) {
+            e.preventDefault();
+            const name = document.getElementById('req-name').value;
+            const userClass = document.getElementById('req-class').value;
+            const reqTitle = document.getElementById('req-title').value;
+
+            const message = `Hello Shree Digital Book Store,\n\nName: ${name}\nClass/Stream: ${userClass}\nRequested Material/Book: ${reqTitle}\n\nPlease let me know if this digital soft copy is available!`;
+            const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+            
+            window.open(waUrl, '_blank');
+        }
+
+        function openCustomRequestModal(defaultClass) {
+            document.getElementById('req-class').value = defaultClass;
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // AI BOOK ASSISTANT CHAT ENGINE
+        function handleAISubmit(e) {
+            e.preventDefault();
+            const input = document.getElementById('ai-input');
+            const query = input.value.trim();
+            if (!query) return;
+
+            appendChatMessage('user', query);
+            input.value = '';
+
+            // Simulate AI Processing Response
+            setTimeout(() => {
+                generateAIResponse(query);
+            }, 600);
+        }
+
+        function sendQuickPrompt(promptText) {
+            appendChatMessage('user', promptText);
+            setTimeout(() => {
+                generateAIResponse(promptText);
+            }, 600);
+        }
+
+        function appendChatMessage(sender, text) {
+            const chatBody = document.getElementById('ai-chat-body');
+            const isUser = sender === 'user';
+
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `flex items-start gap-3 ${isUser ? 'flex-row-reverse' : ''}`;
+
+            msgDiv.innerHTML = `
+                <div class="w-8 h-8 rounded-lg ${isUser ? 'bg-amber-500 text-slate-950 font-bold' : 'gold-gradient-bg text-slate-950 font-bold'} flex items-center justify-center text-xs shrink-0 mt-1">
+                    ${isUser ? 'You' : 'AI'}
+                </div>
+                <div class="${isUser ? 'bg-amber-500 text-slate-950 font-semibold' : 'bg-slate-900 border border-slate-800 text-slate-200'} p-3.5 rounded-2xl ${isUser ? 'rounded-tr-none' : 'rounded-tl-none'} max-w-[85%] leading-relaxed text-sm">
+                    ${text}
+                </div>
+            `;
+
+            chatBody.appendChild(msgDiv);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+
+        function generateAIResponse(query) {
+            const lower = query.toLowerCase();
+            let response = "";
+
+            if (lower.includes('political') || lower.includes('pol science')) {
+                response = `📚 For <strong>Political Science</strong>, I highly recommend our flagship <strong>CHSE +2 Political Science Internal Exam Guide (₹99)</strong> or the <strong>Bureau Solved Papers (₹149)</strong>. Both contain full chapter summaries and answers tailored for Odisha board examinations!`;
+            } else if (lower.includes('+2') || lower.includes('chse') || lower.includes('arts')) {
+                response = `🎓 We specialize in <strong>CHSE +2 Odisha Board</strong> materials! We offer Political Science, History, MIL Odia, English, and complete question bank packages. Direct PDF copies can be delivered via WhatsApp +91 8249093049!`;
+            } else if (lower.includes('competitive') || lower.includes('ossc') || lower.includes('gk')) {
+                response = `🏆 For competitive exams like OSSC, OSSSC, or state police recruitment, check out our <strong>Odisha State Competitive Exam GS Guide (₹249)</strong> and <strong>General Knowledge eBook (₹59)</strong>.`;
+            } else if (lower.includes('price') || lower.includes('cost') || lower.includes('cheap')) {
+                response = `💡 Our study notes and eBooks start from just <strong>₹59</strong>! You can order directly via WhatsApp (+91 8249093049) with instant PDF delivery.`;
+            } else {
+                response = `I found several matching titles for "${query}"! You can browse our explore section above or chat directly with our team on WhatsApp at <strong>+91 8249093049</strong> to get custom digital notes formatted immediately.`;
+            }
+
+            appendChatMessage('ai', response);
+        }
+
+        function clearAIChat() {
+            const chatBody = document.getElementById('ai-chat-body');
+            chatBody.innerHTML = `
+                <div class="flex items-start gap-3">
+                    <div class="w-8 h-8 rounded-lg gold-gradient-bg flex items-center justify-center text-slate-950 font-bold text-xs shrink-0 mt-1">
+                        AI
+                    </div>
+                    <div class="bg-slate-900 border border-slate-800 text-slate-200 p-3.5 rounded-2xl rounded-tl-none max-w-[85%] leading-relaxed">
+                        Hello! 👋 Chat memory cleared. How can I assist you with book recommendations or study material finding today?
+                    </div>
+                </div>
+            `;
+        }
+
+        // MOBILE MENU TOGGLE
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.className = "fa-solid fa-xmark text-lg";
+            } else {
+                menu.classList.add('hidden');
+                icon.className = "fa-solid fa-bars text-lg";
+            }
+        }
+
+        // NOTIFICATION TOAST
+        function showNotification(msg) {
+            const toast = document.createElement('div');
+            toast.className = 'fixed top-24 right-4 bg-amber-500 text-slate-950 font-bold text-xs px-4 py-3 rounded-xl shadow-2xl z-50 animate-bounce';
+            toast.innerHTML = `<i class="fa-solid fa-circle-check mr-2"></i> ${msg}`;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 2500);
+        }
+    </script>
+</body>
+</html>
